@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @AppStorage("showMainView") private var showMainView: Bool = false
     @AppStorage("showTimeView") private var showTimeView: Bool = false
     
     @State private var showWelcomeView: Bool = true
@@ -18,16 +19,17 @@ struct ContentView: View {
             WelcomeView()
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        withAnimation(.easeOut(duration: 0.5)) {
-                            showWelcomeView = false
-                        }
+                        showWelcomeView = false
                     }
                 }
         } else {
             if showTimeView {
-                // TimeView here
-            } else {
+                TimeView()
+            } else if !showTimeView && showMainView {
                 HomeView()
+                
+            } else {
+                NameView()
             }
         }
     }
@@ -35,4 +37,9 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .onAppear {
+            UserDefaults.standard.removeObject(forKey: "userName")
+            UserDefaults.standard.removeObject(forKey: "showTimeView")
+            UserDefaults.standard.removeObject(forKey: "showMainView")
+        }
 }

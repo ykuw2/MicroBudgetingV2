@@ -40,6 +40,7 @@ struct HomeView: View {
             Spacer()
         }
         
+        
         // Calendar View
     }
 }

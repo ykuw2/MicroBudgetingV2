@@ -28,7 +28,7 @@ struct NameView: View {
                 .padding(.bottom)
                 .foregroundStyle(Color.black)
             
-            Button("Go!") {
+            Button("Continue") {
                 let trimmed = tempName.trimmingCharacters(in: .whitespacesAndNewlines)
                 
                 if trimmed.isEmpty {
