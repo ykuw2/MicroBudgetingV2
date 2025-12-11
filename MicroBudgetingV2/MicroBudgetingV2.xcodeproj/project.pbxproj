@@ -31,6 +31,11 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F8D4B1892EEAA2D400AB0EE9 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 		F8D4B1502EE5A21000AB0EE9 = {
 			isa = PBXGroup;
 			children = (
+				F8D4B1892EEAA2D400AB0EE9 /* Models */,
 				F8D4B1752EE7F26500AB0EE9 /* Extensions */,
 				F8D4B15B2EE5A21000AB0EE9 /* MicroBudgetingV2 */,
 				F8D4B16B2EE7EE6000AB0EE9 /* App */,
@@ -74,6 +80,7 @@
 				F8D4B16B2EE7EE6000AB0EE9 /* App */,
 				F8D4B16E2EE7EE7400AB0EE9 /* Views */,
 				F8D4B1752EE7F26500AB0EE9 /* Extensions */,
+				F8D4B1892EEAA2D400AB0EE9 /* Models */,
 			);
 			name = MicroBudgetingV2;
 			packageProductDependencies = (

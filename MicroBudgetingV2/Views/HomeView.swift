@@ -39,7 +39,10 @@ struct HomeView: View {
             
             Spacer()
         }
-        
+        .sheet(isPresented: $showSheet) {
+            SpendingSheetView()
+                .presentationDetents([.height(350), .medium])
+        }
         
         // Calendar View
     }
