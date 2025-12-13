@@ -21,7 +21,9 @@ struct SpendingSheetView: View {
                 .font(.title2)
                 .bold()
             Spacer()
-            Button("Done") {}
+            Button("Done") {
+                dismiss()
+            }
         }
         .padding()
         

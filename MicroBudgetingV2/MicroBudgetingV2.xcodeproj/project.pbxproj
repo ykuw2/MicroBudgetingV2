@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		F8D4B1592EE5A21000AB0EE9 /* MicroBudgetingV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MicroBudgetingV2.app; path = "/Users/yukikuwahara/Desktop/MicroBudgetingV2/MicroBudgetingV2/build/Debug-iphoneos/MicroBudgetingV2.app"; sourceTree = "<absolute>"; };
+		F83793DC2EEE25C400765717 /* MicroBudgetingV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroBudgetingV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -63,6 +63,7 @@
 				F8D4B16B2EE7EE6000AB0EE9 /* App */,
 				F8D4B16E2EE7EE7400AB0EE9 /* Views */,
 				F8D4B18E2EEBFFC000AB0EE9 /* ViewModels */,
+				F83793DC2EEE25C400765717 /* MicroBudgetingV2.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +94,7 @@
 			packageProductDependencies = (
 			);
 			productName = MicroBudgetingV2;
-			productReference = F8D4B1592EE5A21000AB0EE9 /* MicroBudgetingV2.app */;
+			productReference = F83793DC2EEE25C400765717 /* MicroBudgetingV2.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
