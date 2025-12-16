@@ -11,6 +11,8 @@ struct SpendingSheetView: View {
     @Environment(\.dismiss) var dismiss
     @State private var selected: BudgetCategory?
     
+    @StateObject private var storage = SpendingData()
+    
     var body: some View {
         HStack {
             Button("Cancel") {
@@ -34,12 +36,15 @@ struct SpendingSheetView: View {
                 .bold()
             
             SpendingButton(spendingLevel: .low, selected: $selected, color: Color.green) {
+                storage.saveToday(.low)
                 dismiss()
             }
             SpendingButton(spendingLevel: .medium, selected: $selected, color: Color.yellow) {
+                storage.saveToday(.medium)
                 dismiss()
             }
             SpendingButton(spendingLevel: .high, selected: $selected, color: Color.red) {
+                storage.saveToday(.high)
                 dismiss()
             }
         }

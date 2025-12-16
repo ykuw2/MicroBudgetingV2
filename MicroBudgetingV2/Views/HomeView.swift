@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var showSheet: Bool = false
+    @ObservedObject private var storage = SpendingData()
     
     var body: some View {
         VStack {
@@ -38,13 +39,16 @@ struct HomeView: View {
             Divider()
             
             Spacer()
+
+            CalendarView(data: storage.allEntries())
+            
+            Spacer()
+            
         }
         .sheet(isPresented: $showSheet) {
             SpendingSheetView()
                 .presentationDetents([.height(350), .medium])
         }
-        
-        // Calendar View
     }
 }
 

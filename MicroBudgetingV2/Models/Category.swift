@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct BudgetDay: Identifiable, Codable {
     let id: UUID
@@ -17,4 +18,12 @@ enum BudgetCategory: String, Codable, CaseIterable {
     case low = "Low" // Green
     case medium = "Medium" // Yellow
     case high = "High" // Red
+    
+    var color: Color {
+        switch self {
+        case .low: return .green
+        case .medium: return .yellow
+        case .high: return .red
+        }
+    }
 }

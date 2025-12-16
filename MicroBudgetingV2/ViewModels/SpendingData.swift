@@ -5,9 +5,10 @@
 //  Created by Yuki Kuwahara on 12/11/25.
 //
 
+import Combine
 import SwiftUI
 
-struct SpendingData {
+class SpendingData: ObservableObject { // Remember again that when data changes need to use Observable Object
     @AppStorage("spendingData") private var spendingData: Data = Data()
     
     private var formatter: DateFormatter {
@@ -31,6 +32,7 @@ struct SpendingData {
     // Save dictionary
     private func save(_ dict: [String : String]) {
         spendingData = (try? JSONEncoder().encode(dict)) ?? Data()
+        objectWillChange.send() // Triggers Change
     }
 
     func saveToday(_ category: BudgetCategory) {
@@ -44,4 +46,18 @@ struct SpendingData {
         guard let raw = dict[todayKey] else { return nil }
         return BudgetCategory(rawValue: raw)
     }
+    
+    // Gets all the entries
+    func allEntries() -> [Date : BudgetCategory] {
+            let dict = load()
+            var result: [Date : BudgetCategory] = [:]
+            
+            for (key, rawValue) in dict {
+                if let date = formatter.date(from: key),
+                   let category = BudgetCategory(rawValue: rawValue) {
+                    result[date] = category
+                }
+            }
+            return result
+        }
 }
