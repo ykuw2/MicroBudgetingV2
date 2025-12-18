@@ -11,6 +11,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		F83794042EF3F40700765717 /* Extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F8D4B15B2EE5A21000AB0EE9 /* MicroBudgetingV2 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MicroBudgetingV2;
@@ -24,11 +29,6 @@
 		F8D4B16E2EE7EE7400AB0EE9 /* Views */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Views;
-			sourceTree = "<group>";
-		};
-		F8D4B1752EE7F26500AB0EE9 /* Extensions */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F8D4B1892EEAA2D400AB0EE9 /* Models */ = {
@@ -57,9 +57,9 @@
 		F8D4B1502EE5A21000AB0EE9 = {
 			isa = PBXGroup;
 			children = (
+				F83794042EF3F40700765717 /* Extensions */,
 				F83793DC2EEE25C400765717 /* MicroBudgetingV2.app */,
 				F8D4B1892EEAA2D400AB0EE9 /* Models */,
-				F8D4B1752EE7F26500AB0EE9 /* Extensions */,
 				F8D4B15B2EE5A21000AB0EE9 /* MicroBudgetingV2 */,
 				F8D4B16B2EE7EE6000AB0EE9 /* App */,
 				F8D4B16E2EE7EE7400AB0EE9 /* Views */,
@@ -83,10 +83,10 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				F83794042EF3F40700765717 /* Extensions */,
 				F8D4B15B2EE5A21000AB0EE9 /* MicroBudgetingV2 */,
 				F8D4B16B2EE7EE6000AB0EE9 /* App */,
 				F8D4B16E2EE7EE7400AB0EE9 /* Views */,
-				F8D4B1752EE7F26500AB0EE9 /* Extensions */,
 				F8D4B1892EEAA2D400AB0EE9 /* Models */,
 				F8D4B18E2EEBFFC000AB0EE9 /* ViewModels */,
 			);

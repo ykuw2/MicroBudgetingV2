@@ -41,5 +41,6 @@ struct ContentView: View {
             UserDefaults.standard.removeObject(forKey: "userName")
             UserDefaults.standard.removeObject(forKey: "showTimeView")
             UserDefaults.standard.removeObject(forKey: "showMainView")
+            UserDefaults.standard.removeObject(forKey: "spendingData")
         }
 }

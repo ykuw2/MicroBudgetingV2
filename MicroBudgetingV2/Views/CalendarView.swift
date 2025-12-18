@@ -56,7 +56,7 @@ struct CalendarView: View {
                             .padding(4)
                             .background(
                                 Circle()
-                                    .fill(category?.color ?? Color.gray.opacity(0.75))
+                                    .fill(category?.color ?? Color.gray.opacity(0.2))
                             )
                     }
                 }
@@ -64,6 +64,8 @@ struct CalendarView: View {
         }
         .padding()
     }
+    
+   // TODO: Add aggregate amounts
 }
 
 #Preview {

@@ -38,7 +38,7 @@ struct NameView: View {
                 }
             }
             .buttonStyle(.borderedProminent)
-            .tint(.gray.opacity(0.7))
+            .tint(.green)
             .bold()
         }
         .alert("Invalid Name", isPresented: $showAlert, actions: {
@@ -47,10 +47,6 @@ struct NameView: View {
         },message: {
             Text("Name cannot be blank.")
         })
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .ignoresSafeArea()
-        .background(Color.darkGreen)
-        .foregroundColor(Color.white)
     }
 }
 

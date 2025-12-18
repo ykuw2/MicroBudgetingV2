@@ -27,7 +27,6 @@ struct TimeView: View {
                 Picker("", selection: $reminderHour) {
                     ForEach(1...12, id: \.self) { hour in
                             Text("\(hour)")
-                            .foregroundStyle(Color.white)
                             .bold()
                     }
                 }
@@ -37,12 +36,10 @@ struct TimeView: View {
                 
                 Picker("", selection: $reminderPM) {
                     Text("AM")
-                        .foregroundColor(.white)
                         .bold()
                         .tag(false)
 
                     Text("PM")
-                        .foregroundColor(.white)
                         .bold()
                         .tag(true)
                 }
@@ -56,7 +53,7 @@ struct TimeView: View {
                 showConfirmation = true
             }
             .buttonStyle(.borderedProminent)
-            .tint(.gray.opacity(0.7))
+            .tint(.green)
             .bold()
         }
         .alert("Are you sure this is the time you want the notification to be sent?", isPresented: $showConfirmation, actions: {
@@ -68,10 +65,6 @@ struct TimeView: View {
         },message: {
             Text("You won't be able to change this in the future.")
         })
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .ignoresSafeArea()
-        .background(Color.darkGreen)
-        .foregroundColor(Color.white)
     }
 }
 
