@@ -49,6 +49,8 @@ struct HomeView: View {
             SpendingSheetView()
                 .presentationDetents([.height(350), .medium])
         }
+        .background(Color.darkGreen)
+        .foregroundColor(Color.white)
     }
 }
 

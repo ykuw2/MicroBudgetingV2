@@ -56,7 +56,7 @@ struct CalendarView: View {
                             .padding(4)
                             .background(
                                 Circle()
-                                    .fill(category?.color ?? Color.gray.opacity(0.15))
+                                    .fill(category?.color ?? Color.gray.opacity(0.75))
                             )
                     }
                 }
