@@ -43,6 +43,11 @@ struct HomeView: View {
             CalendarView(data: storage.allEntries())
             
             Spacer()
+                .frame(height: 50)
+            
+            AggregateView(data: storage.allEntries())
+            
+            Spacer()
             
         }
         .sheet(isPresented: $showSheet) {

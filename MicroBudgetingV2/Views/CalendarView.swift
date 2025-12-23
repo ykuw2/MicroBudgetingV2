@@ -64,8 +64,6 @@ struct CalendarView: View {
         }
         .padding()
     }
-    
-   // TODO: Add aggregate amounts
 }
 
 #Preview {
