@@ -10,6 +10,14 @@ import SwiftData
 
 @main
 struct MicroBudgetingV2App: App {
+    @AppStorage("reminderHour") private var reminderHour: Int = 9
+    @AppStorage("reminderPM") private var reminderPM: Bool = true
+    
+    init() {
+        NotificationManager.requestNotification()
+        NotificationManager.scheduledReminder(hour: reminderHour, isPM: reminderPM)
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

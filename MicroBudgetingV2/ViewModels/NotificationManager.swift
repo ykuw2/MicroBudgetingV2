@@ -18,7 +18,7 @@ class NotificationManager {
         }
     }
     
-    static func shceduledReminder(hour: Int, isPM: Bool) {
+    static func scheduledReminder(hour: Int, isPM: Bool) {
         // The content of the reminder notification
         let content = UNMutableNotificationContent()
         content.title = "Spending Reminder"
