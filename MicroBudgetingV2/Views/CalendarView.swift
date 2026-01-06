@@ -67,6 +67,21 @@ struct CalendarView: View {
 }
 
 #Preview {
-    let data : [Date : BudgetCategory] = [:] // Dummy data
+    let data: [Date: BudgetCategory] = [
+        // Jan 1-5
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 1).date!: .medium,
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 2).date!: .low,
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 3).date!: .low,
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 4).date!: .high,
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 5).date!: .medium,
+
+        // Jan 6–10
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 6).date!: .low,
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 7).date!: .medium,
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 8).date!: .low,
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 9).date!: .high,
+        DateComponents(calendar: .current, year: 2026, month: 1, day: 10).date!: .low
+        ]
+    
     CalendarView(data: data)
 }
